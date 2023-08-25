@@ -108,6 +108,8 @@ class Nomad:  # pylint: disable=too-many-public-methods,too-many-instance-attrib
         self._scaling = api.Scaling(**self.requester_settings)
         self._sentinel = api.Sentinel(**self.requester_settings)
         self._search = api.Search(**self.requester_settings)
+        self._service = api.Service(**self.requester_settings)
+        self._services = api.Services(**self.requester_settings)
         self._status = api.Status(**self.requester_settings)
         self._system = api.System(**self.requester_settings)
         self._validate = api.Validate(**self.requester_settings)
@@ -303,6 +305,20 @@ class Nomad:  # pylint: disable=too-many-public-methods,too-many-instance-attrib
         Search API
         """
         return self._search
+
+    @property
+    def service(self):
+        """
+        Service API
+        """
+        return self._service
+
+    @property
+    def services(self):
+        """
+        Services API
+        """
+        return self._services
 
     @property
     def metrics(self):
