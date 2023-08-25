@@ -90,6 +90,8 @@ NOMAD_CLIENT_KEY=/path/to/tls/client.key
 |namespaces|Y|Y|Y|Y
 |acl|Y|N|Y|N
 |sentinel|Y|N|Y|N
+|service|Y|N|Y|N
+|services|Y|Y|Y|Y
 
 ## Development
 * create virtualenv and activate
